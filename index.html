@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Giveaway </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #postImageContainer img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+       
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Top Notification Bar -->
+    <div class="bg-red-600 text-center py-2 text-sm">
+        <p>You can use Gift in French by clicking here.</p>
+    </div>
+
+    <!-- Header Section -->
+    <header class="bg-gray-800/95 py-4 shadow-sm">
+        <div class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-4 sm:gap-6 md:flex-nowrap">
+            <h1 class="text-2xl font-bold text-red-500 sm:text-3xl">Gift Giveaway</h1>
+            <nav class="w-full md:w-auto">
+                <ul class="flex flex-wrap items-center gap-3 text-sm text-gray-300 md:gap-5 md:text-base">
+                    <li><a href="#" class="text-gray-300 hover:text-white">Giveaways</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Do Giveaway</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Tools & Games</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Prices</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-4 py-6 sm:py-8 lg:py-12">
+        <!-- Giveaway Picker Section -->
+        <section class="mb-8 space-y-3 text-center sm:space-y-4">
+            <img src="images/ui-icons/instagram.png" alt="Instagram Logo" class="mx-auto mb-2 h-14 w-14 sm:mb-4 sm:h-16 sm:w-16">
+            <h2 class="text-2xl font-bold text-red-500 sm:text-3xl">Free Instagram Giveaway Picker</h2>
+            <p class="text-sm text-gray-400 sm:text-base">Easily make free Instagram giveaways from your likes and comments.</p>
+            <p class="text-sm text-green-500 sm:text-base">To try Gift, you can use Instagram giveaway picker 1 time for each post that has max 200 entries.</p>
+        </section>
+
+    <!-- Modified Links Section -->
+    <section id="linksSection" class="mb-8 rounded-2xl bg-gray-800/90 p-5 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-gray-800/70 sm:p-6">
+            <h3 class="text-xl font-semibold mb-4">Links</h3>
+            <form class="space-y-4">
+                <div>
+                    <label for="posturl" class="block text-gray-400">Paste Link Of Your Media</label>
+                    <input type="text" id="posturl" class="w-full border border-gray-600 rounded-lg px-4 py-2 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Enter the post URL">
+                </div>
+                <button type="button" id="searchButton" class="w-full bg-red-500 text-white font-medium py-2 rounded-lg hover:bg-red-600">Search</button>
+                <fieldset class="mt-4">
+                    <legend class="text-sm font-semibold text-gray-200">Select entry source</legend>
+                    <p class="mt-1 text-xs text-gray-400">Choose whether we should pull reactions from post likes or comments.</p>
+                    <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                        <label class="block">
+                            <input type="radio" name="reactionType" value="likes" class="peer sr-only" aria-label="Select likes" />
+                            <div class="flex cursor-pointer items-center justify-between gap-3 rounded-xl border border-gray-700/70 bg-gray-900/70 px-4 py-3 text-left shadow transition hover:border-red-500/60 hover:bg-gray-900 peer-checked:border-red-500 peer-checked:bg-gray-900">
+                                <span class="flex flex-1 items-center gap-3">
+                                    <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-red-500/10 text-red-400 transition peer-checked:bg-red-500/20 peer-checked:text-red-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                                            <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3a4.66 4.66 0 013.757 1.88l.555.74.555-.74A4.66 4.66 0 0116.312 3c2.974 0 5.438 2.322 5.438 5.25 0 3.925-2.438 7.111-4.739 9.256a25.18 25.18 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.004a.752.752 0 01-.704 0z" />
+                                        </svg>
+                                    </span>
+                                    <span class="space-y-1">
+                                        <span class="block text-sm font-semibold text-white">Likes</span>
+                                        <span class="block text-xs text-gray-400">Collect users who liked the post.</span>
+                                    </span>
+                                </span>
+                                <span class="relative flex h-5 w-5 items-center justify-center rounded-full border border-gray-500 transition peer-checked:border-red-400">
+                                    <span class="h-2.5 w-2.5 rounded-full bg-red-500 opacity-0 transition peer-checked:opacity-100"></span>
+                                </span>
+                            </div>
+                        </label>
+                        <label class="block">
+                            <input type="radio" name="reactionType" value="comments" class="peer sr-only" aria-label="Select comments" checked />
+                            <div class="flex cursor-pointer items-center justify-between gap-3 rounded-xl border border-gray-700/70 bg-gray-900/70 px-4 py-3 text-left shadow transition hover:border-emerald-400/60 hover:bg-gray-900 peer-checked:border-emerald-400 peer-checked:bg-gray-900 peer-checked:shadow-lg">
+                                <span class="flex flex-1 items-center gap-3">
+                                    <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-300 transition peer-checked:bg-emerald-500/20 peer-checked:text-emerald-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9M7.5 12h4.5M21 12c0 1.268-.63 2.39-1.593 3.068a11.953 11.953 0 01-1.383.842c-.433.24-.745.399-.977.52-.864.444-1.247.93-1.247 1.57 0 .215 0 .413.002.593.005.495.009.879-.208 1.087-.259.252-.782.121-1.828-.271A10.451 10.451 0 0112 18.75c-4.97 0-9-3.364-9-7.5s4.03-7.5 9-7.5 9 3.364 9 7.5z" />
+                                        </svg>
+                                    </span>
+                                    <span class="space-y-1">
+                                        <span class="block text-sm font-semibold text-white">Comments</span>
+                                        <span class="block text-xs text-gray-400">Pick winners from post comments.</span>
+                                    </span>
+                                </span>
+                                <span class="relative flex h-5 w-5 items-center justify-center rounded-full border border-gray-500 transition peer-checked:border-emerald-400">
+                                    <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 opacity-0 transition peer-checked:opacity-100"></span>
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+            <div id="postImageContainer" class="mt-4 hidden">
+                <img src="" alt="Post Image" class="w-full max-w-sm rounded shadow">
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="mb-8 space-y-6 text-center">
+            <h3 class="text-xl font-semibold text-white sm:text-2xl">Trusted by more than a hundred thousand world-famous brands and influencers</h3>
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <p class="text-2xl font-bold text-red-500 sm:text-3xl">0.00 M</p>
+                    <p class="text-sm text-gray-400 sm:text-base">The number of giveaways resolved</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-red-500 sm:text-3xl">0.00 M</p>
+                    <p class="text-sm text-gray-400 sm:text-base">The number of gift winners</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-red-500 sm:text-3xl">0.00 B</p>
+                    <p class="text-sm text-gray-400 sm:text-base">The number of entries gathered</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-red-500 sm:text-3xl">0 K</p>
+                    <p class="text-sm text-gray-400 sm:text-base">The number of answered messages</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="mb-8 rounded-2xl bg-gray-800/90 p-5 shadow-lg backdrop-blur supports-[backdrop-filter]:bg-gray-800/70 sm:p-6">
+            <h3 class="text-xl font-semibold mb-4">Why Gift?</h3>
+            <ul class="list-disc list-inside text-gray-400">
+                <li>Really all entries and transparent results for Instagram giveaways.</li>
+                <li>Lists all entries on result page to prove that the results are safe.</li>
+                <li>Data stored securely for at least 15 days.</li>
+            </ul>
+        </section>
+    </main>
+    
+    <button type="button" id="nextButton" class="fixed bottom-24 right-4 z-20 rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400/70 sm:bottom-6 sm:px-5 sm:py-3">Next</button>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2025 Gift. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    // Update this array with your actual participant handles and photo paths.
+    const participantProfiles = [
+            { username: 'draps_de_lit___', displayName: 'Draps de Lit', photo: 'images/participants/draps.jpg' },
+            { username: 'khadidjamertela', displayName: 'خديجة لجين', photo: 'images/participants/mera.jpg' },
+            { username: 'mal_aaak._', displayName: 'َ🦌🤍ملك', photo: 'images/participants/malak.jpg' },
+            { username: 'x_el_paetron_x', displayName: 'Ël Pætrôn', photo: 'images/participants/mosta.jpg' },
+            { username: 'mohato.19', displayName: 'Mohamed guermi', photo: 'images/participants/moha.jpg' },
+           
+        ];
+
+        const postUrlInput = document.getElementById('posturl');
+        const postImageContainer = document.getElementById('postImageContainer');
+        const postImage = postImageContainer.querySelector('img');
+        const searchButton = document.getElementById('searchButton');
+        const reactionTypeRadios = document.querySelectorAll('input[name="reactionType"]');
+        let selectedReactionType = 'comments';
+
+        reactionTypeRadios.forEach((radio) => {
+            if (radio.checked) {
+                selectedReactionType = radio.value;
+            }
+
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    selectedReactionType = radio.value;
+                }
+            });
+        });
+
+        const formatNumber = (value) => new Intl.NumberFormat('en-US').format(Math.max(0, Math.round(Number.isFinite(value) ? value : 0)));
+
+        const formatCompactNumber = (value) => {
+            const safeValue = Math.max(0, Math.round(Number.isFinite(value) ? value : 0));
+            if (safeValue >= 1_000_000) {
+                const scaled = safeValue / 1_000_000;
+                const trimmed = Number.isInteger(scaled) ? scaled : parseFloat(scaled.toFixed(1));
+                return `${trimmed}M`;
+            }
+            if (safeValue >= 1_000) {
+                const scaled = safeValue / 1_000;
+                const trimmed = Number.isInteger(scaled) ? scaled : parseFloat(scaled.toFixed(1));
+                return `${trimmed}K`;
+            }
+            return safeValue.toString();
+        };
+
+        const getReactionMeta = () => {
+            const isLikes = selectedReactionType === 'likes';
+            return {
+                label: isLikes ? 'Likes' : 'Comments',
+                badgeClasses: isLikes
+                    ? 'border-red-500/40 bg-red-500/10 text-red-200'
+                    : 'border-emerald-400/40 bg-emerald-500/10 text-emerald-100',
+                iconSvg: isLikes
+                    ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+                            <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3a4.66 4.66 0 013.757 1.88l.555.74.555-.74A4.66 4.66 0 0116.312 3c2.974 0 5.438 2.322 5.438 5.25 0 3.925-2.438 7.111-4.739 9.256a25.18 25.18 0 01-4.244 3.17 15.247 15.247 0 01-.383.218l-.022.012-.007.004a.752.752 0 01-.704 0z" />
+                        </svg>`
+                    : `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9M7.5 12h4.5M21 12c0 1.268-.63 2.39-1.593 3.068a11.953 11.953 0 01-1.383.842c-.433.24-.745.399-.977.52-.864.444-1.247.93-1.247 1.57 0 .215 0 .413.002.593.005.495.009.879-.208 1.087-.259.252-.782.121-1.828-.271A10.451 10.451 0 0112 18.75c-4.97 0-9-3.364-9-7.5s4.03-7.5 9-7.5 9 3.364 9 7.5z" />
+                        </svg>`
+            };
+        };
+
+        const loader = document.createElement('div');
+        loader.id = 'loader';
+        loader.className = 'hidden';
+        loader.innerHTML = `<div class="loader"></div>`;
+        postImageContainer.parentNode.insertBefore(loader, postImageContainer);
+
+        searchButton.addEventListener('click', () => {
+            const url = postUrlInput.value.trim();
+            const imagePath = 'images/houcine.png'; // Fixed image path
+
+            if (url) {
+                loader.classList.remove('hidden');
+                postImageContainer.classList.add('hidden');
+
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    postImage.src = imagePath;
+                    postImageContainer.classList.remove('hidden');
+                }, 3000); // Show loader for 3 seconds
+            } else {
+                postImage.src = '';
+                postImageContainer.classList.add('hidden');
+                loader.classList.add('hidden');
+            }
+        });
+
+        const nextButton = document.getElementById('nextButton');
+        nextButton.addEventListener('click', () => {
+            const linksSection = document.getElementById('linksSection');
+
+            if (!linksSection) {
+                return;
+            }
+
+            const { label: reactionLabel, badgeClasses: reactionBadgeClasses, iconSvg: reactionIcon } = getReactionMeta();
+
+            linksSection.className = 'mb-8 rounded-2xl border border-red-500/20 bg-gray-900/85 p-5 shadow-xl backdrop-blur supports-[backdrop-filter]:bg-gray-900/70 transition-colors sm:p-6';
+            linksSection.innerHTML = `
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="space-y-2 text-center sm:space-y-3">
+                        <span class="inline-flex items-center gap-2 rounded-full bg-red-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-400">Step 1</span>
+                        <h3 class="text-xl font-semibold text-white sm:text-3xl">Contest setup</h3>
+                        <p class="text-sm text-gray-400 sm:text-base">Fine-tune your giveaway rules before selecting the winners.</p>
+                        <div class="flex justify-center">
+                            <span class="inline-flex items-center gap-2 rounded-full border ${reactionBadgeClasses} px-3 py-1 text-[0.7rem] font-medium uppercase tracking-wide">
+                                ${reactionIcon}
+                                <span>${reactionLabel} selected</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="grid gap-5 md:grid-cols-2">
+                        <div class="rounded-2xl border border-gray-700/60 bg-gray-900/70 p-5 shadow-inner sm:p-6 md:col-span-2">
+                            <label for="contestName" class="mb-2 block text-sm font-medium text-gray-300 sm:text-base">Contest name</label>
+                            <input type="text" id="contestName" value="Houcine meuble's Giveaway" class="w-full rounded-xl border border-gray-700 bg-gray-950/60 px-4 py-3 text-sm text-white placeholder-gray-500 shadow focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/60" placeholder="Enter contest name" />
+                        </div>
+
+                        <div class="rounded-2xl border border-gray-700/60 bg-gray-900/70 p-5 shadow-inner sm:p-6">
+                            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                <div class="space-y-1">
+                                    <h4 class="text-base font-semibold text-white">Number of winners</h4>
+                                    <p class="text-xs text-gray-400 sm:text-sm">Winner slots that will be drawn.</p>
+                                </div>
+                                <span class="text-xs text-gray-500">Required</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between gap-4 rounded-xl bg-gray-950/60 px-3 py-2 sm:gap-6">
+                                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/90 text-lg font-semibold text-white transition hover:bg-red-500" data-action="decrement" data-target="winners">−</button>
+                                <span class="text-xl font-bold text-white sm:text-2xl" data-display="winners" data-min="1" data-max="10">1</span>
+                                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/90 text-lg font-semibold text-white transition hover:bg-emerald-500" data-action="increment" data-target="winners">+</button>
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-gray-700/60 bg-gray-900/70 p-5 shadow-inner sm:p-6">
+                            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                <div class="space-y-1">
+                                    <h4 class="text-base font-semibold text-white">Number of substitutes</h4>
+                                    <p class="text-xs text-gray-400 sm:text-sm">Backup winners in case of no response.</p>
+                                </div>
+                                <span class="text-xs text-gray-500">Optional</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between gap-4 rounded-xl bg-gray-950/60 px-3 py-2 sm:gap-6">
+                                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/90 text-lg font-semibold text-white transition hover:bg-red-500" data-action="decrement" data-target="substitutes">−</button>
+                                <span class="text-xl font-bold text-white sm:text-2xl" data-display="substitutes" data-min="0" data-max="10">0</span>
+                                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/90 text-lg font-semibold text-white transition hover:bg-emerald-500" data-action="increment" data-target="substitutes">+</button>
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-gray-700/60 bg-gray-900/70 p-5 shadow-inner sm:p-6">
+                            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                <div class="space-y-1">
+                                    <h4 class="text-base font-semibold text-white">Minimum tags</h4>
+                                    <p class="text-xs text-gray-400 sm:text-sm">Required mentions in a qualifying comment.</p>
+                                </div>
+                                <span class="text-xs text-gray-500">Optional</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between gap-4 rounded-xl bg-gray-950/60 px-3 py-2 sm:gap-6">
+                                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/90 text-lg font-semibold text-white transition hover:bg-red-500" data-action="decrement" data-target="tags">−</button>
+                                <span class="text-xl font-bold text-white sm:text-2xl" data-display="tags" data-min="0" data-max="5">0</span>
+                                <button type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/90 text-lg font-semibold text-white transition hover:bg-emerald-500" data-action="increment" data-target="tags">+</button>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-5 md:col-span-2 md:grid-cols-2">
+                            <div class="rounded-2xl border border-gray-700/60 bg-gray-900/70 p-5 shadow-inner sm:p-6">
+                                <h4 class="text-base font-semibold text-white">Must include phrases</h4>
+                                <p class="mt-1 text-xs text-gray-400 sm:text-sm">Only comments containing the phrases below will qualify.</p>
+                                <input type="text" id="phrases" placeholder="e.g. giveaway" class="mt-4 w-full rounded-xl border border-gray-700 bg-gray-950/60 px-4 py-3 text-sm text-white placeholder-gray-500 shadow focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/60" />
+                            </div>
+                            <div class="rounded-2xl border border-gray-700/60 bg-gray-900/70 p-5 shadow-inner sm:p-6">
+                                <h4 class="text-base font-semibold text-white">Filtering options</h4>
+                                <div class="mt-4 space-y-3 sm:space-y-4">
+                                    <label class="inline-flex cursor-pointer items-center">
+                                        <input type="checkbox" id="uniqueUsers" class="peer sr-only">
+                                        <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors duration-200 after:absolute after:left-1 after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-transform after:content-[''] peer-checked:bg-red-500 peer-checked:after:translate-x-5"></span>
+                                        <span class="ml-3 text-sm font-medium text-gray-300">Get unique users</span>
+                                    </label>
+                                    <label class="inline-flex cursor-pointer items-center">
+                                        <input type="checkbox" id="filterDuplicates" class="peer sr-only">
+                                        <span class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors duration-200 after:absolute after:left-1 after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-transform after:content-[''] peer-checked:bg-red-500 peer-checked:after:translate-x-5"></span>
+                                        <span class="ml-3 text-sm font-medium text-gray-300">Remove duplicate comments</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-2xl border border-gray-700/60 bg-gray-900/70 p-5 shadow-inner sm:p-6 md:col-span-2">
+                            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                <div class="space-y-1">
+                                    <h4 class="text-base font-semibold text-white">Participants</h4>
+                                    <p class="text-xs text-gray-400 sm:text-sm">Entries are managed in code and stay hidden from the draw interface.</p>
+                                </div>
+                                <span class="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-200">Private</span>
+                            </div>
+                            <p class="mt-4 text-sm text-gray-300">Click <strong>Continue to drawing</strong> whenever you're ready. The system will randomly select the requested winners from the configured dataset.</p>
+                            <p id="participantsError" class="mt-3 hidden rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300"></p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                        <div class="text-xs text-gray-500 sm:text-sm">Review your settings before moving to the drawing step.</div>
+                        <button id="nextBtn" class="inline-flex items-center justify-center gap-2 rounded-xl bg-red-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500/60">
+                            Continue to drawing
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>`;
+
+            const counterButtons = linksSection.querySelectorAll('[data-action]');
+            counterButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+                    const display = linksSection.querySelector(`[data-display="${target}"]`);
+                    if (!display) {
+                        return;
+                    }
+
+                    const min = parseInt(display.getAttribute('data-min') || '0', 10);
+                    const max = parseInt(display.getAttribute('data-max') || Number.MAX_SAFE_INTEGER.toString(), 10);
+                    let value = parseInt(display.textContent || '0', 10);
+
+                    if (button.dataset.action === 'increment') {
+                        value = Math.min(max, value + 1);
+                    } else {
+                        value = Math.max(min, value - 1);
+                    }
+
+                    display.textContent = value.toString();
+                });
+            });
+
+            const participantsError = linksSection.querySelector('#participantsError');
+            const uniqueUsersCheckbox = linksSection.querySelector('#uniqueUsers');
+            const filterDuplicatesCheckbox = linksSection.querySelector('#filterDuplicates');
+            const nextStepButton = linksSection.querySelector('#nextBtn');
+
+            const hideError = () => {
+                if (participantsError) {
+                    participantsError.classList.add('hidden');
+                }
+            };
+
+            const showError = (message) => {
+                if (participantsError) {
+                    participantsError.textContent = message;
+                    participantsError.classList.remove('hidden');
+                }
+            };
+
+            const formatDisplayName = (participant) => {
+                if (!participant) {
+                    return '';
+                }
+                if (participant.displayName && participant.displayName.trim()) {
+                    return participant.displayName;
+                }
+                return participant.username.replace(/[_-]+/g, ' ');
+            };
+
+            const initialsFor = (participant) => {
+                const displayName = formatDisplayName(participant);
+                const parts = displayName.split(/\s+/).filter(Boolean);
+                if (!parts.length) {
+                    return (participant.username[0] || '?').toUpperCase();
+                }
+                const initials = parts.slice(0, 2).map((part) => part[0] || '').join('');
+                return initials.toUpperCase() || '?';
+            };
+
+            const createAvatarElement = (participant, extraClasses = '') => {
+                const classes = extraClasses.split(/\s+/).filter(Boolean);
+                const outerClasses = ['relative', 'flex', 'shrink-0', 'items-center', 'justify-center', 'rounded-full', 'bg-gradient-to-tr', 'from-yellow-400', 'via-pink-500', 'to-purple-500', 'p-[3px]'];
+                const textClasses = [];
+
+                classes.forEach((cls) => {
+                    if (cls.startsWith('text-')) {
+                        textClasses.push(cls);
+                    } else {
+                        outerClasses.push(cls);
+                    }
+                });
+
+                const outer = document.createElement('div');
+                outer.className = outerClasses.join(' ');
+
+                const inner = document.createElement('div');
+                inner.className = ['relative', 'flex', 'h-full', 'w-full', 'items-center', 'justify-center', 'overflow-hidden', 'rounded-full', 'bg-gray-900', 'text-xs', 'font-semibold', 'uppercase', 'text-gray-200', ...textClasses].join(' ');
+
+                if (participant.photo) {
+                    const img = document.createElement('img');
+                    img.src = participant.photo;
+                    img.alt = `${formatDisplayName(participant)} avatar`;
+                    img.className = 'h-full w-full object-cover';
+                    img.onerror = () => {
+                        img.remove();
+                        inner.textContent = initialsFor(participant);
+                    };
+                    inner.appendChild(img);
+                } else {
+                    inner.textContent = initialsFor(participant);
+                }
+
+                outer.appendChild(inner);
+                return outer;
+            };
+
+            const readCount = (id) => {
+                const display = linksSection.querySelector(`[data-display="${id}"]`);
+                if (!display) {
+                    return 0;
+                }
+                const value = parseInt(display.textContent || '0', 10);
+                return Number.isNaN(value) ? 0 : value;
+            };
+
+            const buildListCard = (title, items, accentClass) => {
+                if (!items.length) {
+                    return null;
+                }
+
+                const container = document.createElement('div');
+                container.className = `space-y-3 rounded-xl border ${accentClass} bg-gray-950/50 p-4 shadow-inner`;
+
+                const heading = document.createElement('p');
+                heading.className = 'text-sm font-semibold uppercase tracking-wide text-gray-200';
+                heading.textContent = title;
+                container.appendChild(heading);
+
+                const list = document.createElement('ul');
+                list.className = 'space-y-2';
+                items.forEach((participant, index) => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'flex items-center gap-3 rounded-lg border border-gray-800 bg-gray-900/70 px-3 py-2';
+
+                    const badge = document.createElement('span');
+                    badge.className = 'flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/80 text-xs font-semibold text-emerald-950';
+                    badge.textContent = `${index + 1}`;
+                    listItem.appendChild(badge);
+
+                    const avatar = createAvatarElement(participant, 'h-10 w-10 text-xs');
+                    listItem.appendChild(avatar);
+
+                    const info = document.createElement('div');
+                    info.className = 'min-w-0';
+
+                    const nameEl = document.createElement('p');
+                    nameEl.className = 'truncate text-sm font-semibold text-white';
+                    nameEl.textContent = formatDisplayName(participant);
+                    info.appendChild(nameEl);
+
+                    const handleEl = document.createElement('p');
+                    handleEl.className = 'truncate text-xs text-gray-400';
+                    handleEl.textContent = `@${participant.username}`;
+                    info.appendChild(handleEl);
+
+                    listItem.appendChild(info);
+                    list.appendChild(listItem);
+                });
+                container.appendChild(list);
+
+                return container;
+            };
+
+            const getParticipantPool = ({ silent = false } = {}) => {
+                let pool = participantProfiles.map((participant) => ({ ...participant }));
+                const enforceUnique = (uniqueUsersCheckbox && uniqueUsersCheckbox.checked) || (filterDuplicatesCheckbox && filterDuplicatesCheckbox.checked);
+
+                if (enforceUnique) {
+                    const seen = new Set();
+                    pool = pool.filter((participant) => {
+                        const handle = participant.username.toLowerCase();
+                        if (seen.has(handle)) {
+                            return false;
+                        }
+                        seen.add(handle);
+                        return true;
+                    });
+                }
+
+                if (!pool.length && !silent) {
+                    showError('No participants configured. Update the participantProfiles array in the script.');
+                }
+
+                return pool;
+            };
+
+            const showProgressView = ({ totalComments = 32000 } = {}) => {
+                if (!linksSection) {
+                    return Promise.resolve();
+                }
+
+                const { label: reactionLabel, iconSvg } = getReactionMeta();
+                const compactTotal = formatCompactNumber(totalComments);
+                const formattedTotal = formatNumber(totalComments);
+
+                linksSection.className = 'mb-8 rounded-2xl border border-sky-500/30 bg-gray-900/95 p-5 shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-gray-900/80 transition-colors sm:p-6';
+                linksSection.innerHTML = `
+                    <div class="space-y-8 sm:space-y-10">
+                        <div class="space-y-2 text-center sm:space-y-3">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-sky-500/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-wide text-sky-300">
+                                ${iconSvg}
+                                <span>Syncing ${reactionLabel.toLowerCase()}</span>
+                            </span>
+                            <h3 class="text-2xl font-semibold text-white sm:text-3xl">Fetching engagement data</h3>
+                            <p class="mx-auto max-w-xl text-sm text-gray-300 sm:text-base">Hold tight while we securely load ${compactTotal} comments to keep the giveaway fair and transparent.</p>
+                        </div>
+
+                        <div class="space-y-4 rounded-2xl border border-gray-700/60 bg-gray-950/70 p-6 shadow-inner sm:p-8">
+                            <div class="flex items-center justify-between text-sm text-gray-300">
+                                <span>Processed comments</span>
+                                <span class="font-semibold text-white"><span data-progress-count>0</span> / ${compactTotal}</span>
+                            </div>
+                            <div class="relative h-3 w-full overflow-hidden rounded-full bg-gray-800/60">
+                                <div data-progress-bar class="absolute inset-0 h-full w-0 origin-left rounded-full bg-gradient-to-r from-red-500 via-purple-500 to-emerald-400"></div>
+                            </div>
+                            <div class="flex items-center justify-between text-xs text-gray-400">
+                                <span data-progress-status>Connecting to Instagram…</span>
+                                <span>${formattedTotal} total</span>
+                            </div>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-3">
+                            <div class="rounded-2xl border border-red-500/20 bg-red-500/5 p-4 text-left shadow">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-red-500/20 text-red-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-6.288a9 9 0 11-5.468 16.244A8.966 8.966 0 013 12a8.966 8.966 0 013.532-7.243A8.963 8.963 0 0112 3.462z" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-sm font-semibold text-white">Fraud shield</p>
+                                        <p class="mt-1 text-xs text-red-100/80">Removing duplicates & suspicious entries.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl border border-purple-500/20 bg-purple-500/5 p-4 text-left shadow">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/20 text-purple-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 00-.75.75v5.25H9a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0V14.25H15a.75.75 0 000-1.5h-2.25V7.5A.75.75 0 0012 6.75z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-sm font-semibold text-white">Live counter</p>
+                                        <p class="mt-1 text-xs text-purple-100/80">${compactTotal} comments synced progressively.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-4 text-left shadow">
+                                <div class="flex items-center gap-3">
+                                    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-200">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h5.25c.621 0 1.125.504 1.125 1.125v5.25c0 .621-.504 1.125-1.125 1.125h-5.25A1.125 1.125 0 013 18.375v-5.25zM13.5 6.375c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 10.875v-4.5z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h-3A2.25 2.25 0 003 9v3.75m9-6h3A2.25 2.25 0 0117.25 9v3.75m-9 3.75h-3A2.25 2.25 0 013 18v3m9-6h3A2.25 2.25 0 0117.25 18v3" />
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-sm font-semibold text-white">Audit trail</p>
+                                        <p class="mt-1 text-xs text-emerald-100/80">Every action logged for transparency.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+
+                const countEl = linksSection.querySelector('[data-progress-count]');
+                const barEl = linksSection.querySelector('[data-progress-bar]');
+                const statusEl = linksSection.querySelector('[data-progress-status]');
+
+                const statuses = [
+                    { threshold: 0, text: 'Connecting to Instagram…' },
+                    { threshold: 0.25, text: 'Indexing engagement on the post…' },
+                    { threshold: 0.55, text: 'Filtering bots & duplicates…' },
+                    { threshold: 0.8, text: 'Locking verified entries…' }
+                ];
+
+                return new Promise((resolve) => {
+                    const duration = 3400;
+                    const start = performance.now();
+
+                    const step = (now) => {
+                        const elapsed = now - start;
+                        const progress = Math.min(1, elapsed / duration);
+                        const currentCount = Math.floor(progress * totalComments);
+
+                        if (countEl) {
+                            countEl.textContent = formatNumber(currentCount);
+                        }
+                        if (barEl) {
+                            barEl.style.width = `${Math.max(progress * 100, 3)}%`;
+                        }
+                        if (statusEl) {
+                            const activeStatus = statuses.reduce((acc, status) => (progress >= status.threshold ? status.text : acc), statuses[0].text);
+                            statusEl.textContent = activeStatus;
+                        }
+
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            if (countEl) {
+                                countEl.textContent = formattedTotal;
+                            }
+                            if (statusEl) {
+                                statusEl.textContent = 'Comments synced. Preparing draw…';
+                            }
+                            setTimeout(resolve, 650);
+                        }
+                    };
+
+                    requestAnimationFrame(step);
+                });
+            };
+
+            const showWinnerView = (selection) => {
+                if (!linksSection) {
+                    return;
+                }
+
+                const winners = selection?.winners ?? [];
+                const substitutes = selection?.substitutes ?? [];
+
+                if (!winners.length) {
+                    return;
+                }
+
+                hideError();
+
+                linksSection.className = 'mb-8 rounded-2xl border border-emerald-500/30 bg-gray-900/90 p-5 shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-gray-900/70 sm:p-6';
+                linksSection.innerHTML = '';
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'space-y-6 sm:space-y-8';
+
+                const header = document.createElement('div');
+                header.className = 'space-y-2 text-center';
+
+                const badge = document.createElement('span');
+                badge.className = 'inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-emerald-300';
+                badge.textContent = 'Draw complete';
+                header.appendChild(badge);
+
+                const title = document.createElement('h3');
+                title.className = 'text-2xl font-semibold text-white sm:text-3xl';
+                title.textContent = 'Meet your giveaway winner';
+                header.appendChild(title);
+
+                const subtitle = document.createElement('p');
+                subtitle.className = 'text-sm text-emerald-200 sm:text-base';
+                subtitle.textContent = 'Share the result with your community or run another draw instantly.';
+                header.appendChild(subtitle);
+
+                wrapper.appendChild(header);
+
+                const mainWinner = winners[0];
+                const heroCard = document.createElement('div');
+                heroCard.className = 'flex flex-col items-center gap-4 rounded-2xl border border-emerald-400/40 bg-emerald-500/10 px-5 py-7 text-center shadow-lg sm:px-8 sm:py-10';
+
+                const avatar = createAvatarElement(mainWinner, 'h-24 w-24 text-3xl shadow-inner');
+                heroCard.appendChild(avatar);
+
+                const heroInfo = document.createElement('div');
+                heroInfo.className = 'space-y-1';
+
+                const heroLabel = document.createElement('p');
+                heroLabel.className = 'text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300';
+                heroLabel.textContent = 'Grand winner';
+                heroInfo.appendChild(heroLabel);
+
+                const heroName = document.createElement('p');
+                heroName.className = 'text-3xl font-semibold text-white';
+                heroName.textContent = formatDisplayName(mainWinner);
+                heroInfo.appendChild(heroName);
+
+                const heroHandle = document.createElement('p');
+                heroHandle.className = 'text-sm text-emerald-200';
+                heroHandle.textContent = `@${mainWinner.username}`;
+                heroInfo.appendChild(heroHandle);
+
+                heroCard.appendChild(heroInfo);
+                wrapper.appendChild(heroCard);
+
+                if (winners.length > 1) {
+                    const additionalCard = buildListCard('Additional winners', winners.slice(1), 'border-emerald-400/40');
+                    if (additionalCard) {
+                        wrapper.appendChild(additionalCard);
+                    }
+                }
+
+                if (substitutes.length) {
+                    const substitutesCard = buildListCard('Substitutes', substitutes, 'border-sky-400/40');
+                    if (substitutesCard) {
+                        wrapper.appendChild(substitutesCard);
+                    }
+                }
+
+                const actions = document.createElement('div');
+                actions.className = 'flex flex-col gap-3 sm:flex-row sm:justify-center';
+
+                const redrawBtn = document.createElement('button');
+                redrawBtn.type = 'button';
+                redrawBtn.dataset.action = 'redraw';
+                redrawBtn.className = 'inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-emerald-950 shadow-lg transition hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400/60';
+                redrawBtn.textContent = 'Draw again';
+                actions.appendChild(redrawBtn);
+
+                const copyBtn = document.createElement('button');
+                copyBtn.type = 'button';
+                copyBtn.dataset.action = 'copy';
+                copyBtn.className = 'inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-400/40 bg-transparent px-6 py-3 text-sm font-semibold text-emerald-200 transition hover:border-emerald-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400/60';
+                copyBtn.textContent = 'Copy results';
+                actions.appendChild(copyBtn);
+
+                wrapper.appendChild(actions);
+
+                linksSection.appendChild(wrapper);
+
+                redrawBtn.addEventListener('click', () => handleDraw(true));
+
+                copyBtn.addEventListener('click', async () => {
+                    if (!lastSelection.winners.length && !lastSelection.substitutes.length) {
+                        copyBtn.textContent = 'Draw first';
+                        setTimeout(() => {
+                            copyBtn.textContent = 'Copy results';
+                        }, 1500);
+                        return;
+                    }
+
+                    const text = [
+                        'Winners:',
+                        ...lastSelection.winners.map((participant, idx) => `${idx + 1}. ${formatDisplayName(participant)} (@${participant.username})`),
+                        '',
+                        'Substitutes:',
+                        ...lastSelection.substitutes.map((participant, idx) => `${idx + 1}. ${formatDisplayName(participant)} (@${participant.username})`)
+                    ].join('\n');
+
+                    try {
+                        await navigator.clipboard.writeText(text.trim());
+                        copyBtn.textContent = 'Copied!';
+                        setTimeout(() => {
+                            copyBtn.textContent = 'Copy results';
+                        }, 1500);
+                    } catch (error) {
+                        copyBtn.textContent = 'Copy failed';
+                        setTimeout(() => {
+                            copyBtn.textContent = 'Copy results';
+                        }, 1500);
+                    }
+                });
+            };
+
+            const drawWinners = (pool) => {
+                const winnersNeeded = Math.max(1, readCount('winners'));
+                const substitutesNeeded = Math.max(0, readCount('substitutes'));
+
+                const available = [...pool];
+                if (available.length < winnersNeeded) {
+                    showError('Not enough participants for the number of winners selected.');
+                    return null;
+                }
+
+                const winners = [];
+                for (let i = 0; i < winnersNeeded; i += 1) {
+                    const index = Math.floor(Math.random() * available.length);
+                    winners.push(available.splice(index, 1)[0]);
+                }
+
+                const substitutes = [];
+                for (let i = 0; i < substitutesNeeded && available.length; i += 1) {
+                    const index = Math.floor(Math.random() * available.length);
+                    substitutes.push(available.splice(index, 1)[0]);
+                }
+
+                lastSelection = { winners, substitutes };
+                return lastSelection;
+            };
+
+            let lastParticipantPool = getParticipantPool({ silent: true });
+            let lastSelection = { winners: [], substitutes: [] };
+            let isDrawingInProgress = false;
+
+            const handleDraw = (reuseLastPool = false) => {
+                if (isDrawingInProgress) {
+                    return;
+                }
+
+                const participants = reuseLastPool && lastParticipantPool.length
+                    ? [...lastParticipantPool]
+                    : getParticipantPool();
+
+                if (!participants.length) {
+                    return;
+                }
+
+                lastParticipantPool = participants.slice();
+                const selection = drawWinners(participants);
+                if (!selection) {
+                    return;
+                }
+
+                isDrawingInProgress = true;
+                const progressTarget = 32000;
+
+                showProgressView({ totalComments: progressTarget })
+                    .then(() => {
+                        showWinnerView(selection);
+                    })
+                    .catch((error) => {
+                        console.error('Progress simulation failed', error);
+                    })
+                    .finally(() => {
+                        isDrawingInProgress = false;
+                    });
+            };
+
+            [uniqueUsersCheckbox, filterDuplicatesCheckbox].forEach((checkbox) => {
+                if (!checkbox) {
+                    return;
+                }
+                checkbox.addEventListener('change', () => {
+                    hideError();
+                    lastParticipantPool = getParticipantPool({ silent: true });
+                    lastSelection = { winners: [], substitutes: [] };
+                });
+            });
+
+            if (nextStepButton) {
+                nextStepButton.addEventListener('click', () => handleDraw(false));
+            }
+
+            if (nextButton) {
+                nextButton.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
